@@ -12,7 +12,7 @@
     "start": "node dist/index.js",
     "clean": "rimraf dist *.tsbuildinfo",
     "build": "tsc -b .",
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "export AWS_PROFILE=personal && ts-node-dev src/index.ts",
     "test": "jest --passWithNoTests --concurrency 1",
     "lint": "eslint src --ext js,ts,tsx",
     "extract": "api-extractor run --local"
